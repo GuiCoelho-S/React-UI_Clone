@@ -1,16 +1,25 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import * as S from "./style";
 
-import PhoneIcon from '@material-ui/icons/Phone';
-import EmailIcon from '@material-ui/icons/Email';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import PhoneIcon from "@material-ui/icons/Phone";
+import EmailIcon from "@material-ui/icons/Email";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import ListIcon from "@material-ui/icons/List";
 
 import Facebook from "../../assets/icons/facebook-icon.png";
 import Twitter from "../../assets/icons/twitter-icon.png";
 import Gmail from "../../assets/icons/gmail-icon.png";
 
-
 const BookPage = () => {
+  const [menu, setMenu] = useState(false);
+
+  const ShowMenu = () => {
+    setMenu(!menu);
+  };
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -19,7 +28,65 @@ const BookPage = () => {
     >
       <S.Container>
         <S.Content>
-          <S.Header></S.Header>
+          <S.Header>
+            <S.HideMenu>
+              <ul>
+                <select>
+                  <option>En</option>
+                  <option>Pt</option>
+                  <option>Es</option>
+                  <option>Ger</option>
+                </select>
+                <li>
+                  <a href="/">About Us</a>
+                </li>
+                <li>
+                  <a href="/">Community</a>
+                </li>
+                <li>
+                  <a href="/">Contact</a>
+                </li>
+              </ul>
+            </S.HideMenu>
+
+            <ul>
+              <li>
+                <a href="/">
+                  <FacebookIcon />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <InstagramIcon />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <LinkedInIcon />
+                </a>
+              </li>
+
+              <S.CircleButton onClick={ShowMenu}>
+                <ListIcon />
+              </S.CircleButton>
+            </ul>
+            
+          </S.Header>
+          {menu ? (
+              <S.menuHamburguer>
+                <select>
+                  <option>En</option>
+                  <option>Pt</option>
+                  <option>Es</option>
+                  <option>Ger</option>
+                </select>
+                <a href="/">About Us</a>
+                <a href="/">Community</a>
+                <a href="/">Contact</a>
+              </S.menuHamburguer>
+            ) : (
+              <></>
+            )}
           <S.C_Apresentation>
             <S.CardMain>
               <S.CardMainItem>
@@ -80,7 +147,7 @@ const BookPage = () => {
           <S.CardVideo>
             <S.FlexColumn>
               <div>
-                <h1>That's item 01</h1>
+                <h2>That's item 01</h2>
                 <p>
                   Curabitur finibus sapien felis, non luctus odio elementum
                   pulvinar. Aliquam{" "}
@@ -90,7 +157,7 @@ const BookPage = () => {
 
             <S.FlexColumn>
               <article>
-                <h1>That's item 02</h1>
+                <h2>That's item 02</h2>
                 <p>
                   Curabitur finibus sapien felis, non luctus odio elementum
                   pulvinar. Aliquam{" "}
@@ -100,7 +167,7 @@ const BookPage = () => {
 
             <S.FlexColumn>
               <aside>
-                <h1>That's item 03</h1>
+                <h2>That's item 03</h2>
                 <p>
                   Curabitur finibus sapien felis, non luctus odio elementum
                   pulvinar. Aliquam{" "}
@@ -112,9 +179,9 @@ const BookPage = () => {
 
         <S.MainVideo>
           <article>
-            <h1>
+            <h2>
               <center>GREAT EXPERIENCES FOR HOTEL AND RESORT</center>
-            </h1>
+            </h2>
             <div>
               <p>CLICK THE PLAYER TO</p>
               <S.CircleButton>
@@ -223,15 +290,14 @@ const BookPage = () => {
                   est ullamcorper eget nulla facilisi..
                 </p>
                 <S.FlexColumn>
-                    <S.Images />
-                    <S.Images />
-                    <S.Images />
-                    <S.Images />
-                    
+                  <S.Images />
+                  <S.Images />
+                  <S.Images />
+                  <S.Images />
                 </S.FlexColumn>
                 <S.CircleButton>
-                <S.IconPlay />
-              </S.CircleButton>
+                  <S.IconPlay />
+                </S.CircleButton>
               </section>
             </S.ContentRoom>
           </S.Room>
@@ -240,7 +306,11 @@ const BookPage = () => {
           <div>
             <S.FlexColumn>
               <h2>Zetta Hotels</h2>
-              <p>Our hotel an image  of quality and professionalism combined with hard work and precision. You can expect only the best services from our staff.</p>
+              <p>
+                Our hotel an image of quality and professionalism combined with
+                hard work and precision. You can expect only the best services
+                from our staff.
+              </p>
               <aside>
                 <S.IconNetwork src={Facebook} />
                 <S.IconNetwork src={Twitter} />
@@ -248,39 +318,53 @@ const BookPage = () => {
               </aside>
             </S.FlexColumn>
             <S.Communication>
-                <ul>
-                  <h3>Useful links</h3>
-                  <li><a href="/">Blog</a></li>
-                  <li><a href="/">Rooms</a></li>
-                  <li><a href="/">Gift Card</a></li>
-                  <li><a href="/">Testimonials</a></li>
-                </ul>
-                <ul>
-                  <h3>Privacy</h3>
-                  <li><a href="/">Career</a></li>
-                  <li><a href="/">About us</a></li>
-                  <li><a href="/">Contact us</a></li>
-                  <li><a href="/">Services</a></li>
-                </ul>
-                <ul>
-                  <h3>Contact info</h3>
-                  <li>
-                    <EmailIcon />
-                    <p>example@yahoo.com</p>
-                  </li>
-                  <li>
-                    <PhoneIcon />
-                    <p>+0 320 422 4254</p>
-                  </li>
-                  <li>
-                    <LocationOnIcon />
-                    <p>Main Str Chicago Ilinols</p>
-                  </li>
-                  
-                </ul>
+              <ul>
+                <h3>Useful links</h3>
+                <li>
+                  <a href="/">Blog</a>
+                </li>
+                <li>
+                  <a href="/">Rooms</a>
+                </li>
+                <li>
+                  <a href="/">Gift Card</a>
+                </li>
+                <li>
+                  <a href="/">Testimonials</a>
+                </li>
+              </ul>
+              <ul>
+                <h3>Privacy</h3>
+                <li>
+                  <a href="/">Career</a>
+                </li>
+                <li>
+                  <a href="/">About us</a>
+                </li>
+                <li>
+                  <a href="/">Contact us</a>
+                </li>
+                <li>
+                  <a href="/">Services</a>
+                </li>
+              </ul>
+              <ul>
+                <h3>Contact info</h3>
+                <li>
+                  <EmailIcon />
+                  <p>example@yahoo.com</p>
+                </li>
+                <li>
+                  <PhoneIcon />
+                  <p>+0 320 422 4254</p>
+                </li>
+                <li>
+                  <LocationOnIcon />
+                  <p>Main Str Chicago Ilinols</p>
+                </li>
+              </ul>
             </S.Communication>
           </div>
-          
         </S.Footer>
       </S.Container>
     </motion.div>

@@ -33,10 +33,10 @@ export const IconRight = styled(Icon)`
   background-image: url(${Right});
 `;
 export const IconNetwork = styled.img`
-width:40px;
-height:40px;
-border-radius:50%;
-`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+`;
 export const CircleButton = styled.button`
   cursor: pointer;
   object-fit: contain;
@@ -77,7 +77,7 @@ export const Content = styled.div`
   display: grid;
   background-color: antiquewhite;
   grid-template-rows: minmax(60px, auto) 500px;
-  grid-template-columns: 50%;
+  
 `;
 
 export const Main = styled.div`
@@ -89,9 +89,84 @@ export const Main = styled.div`
 `;
 
 export const Header = styled.header`
-  background-color: pink;
   grid-area: 1/1/2/3;
+  display:flex;
+  align-items:center;
+  background-color:#000;
+  position:relative;
+  width:100%;
+  ul {
+    display:flex;
+    width:100%;
+    justify-content:space-evenly;
+    align-items:center;
+    
+    li {
+      display:inline-flex;
+      transform:translateY(2px);
+
+      span {padding-left:10px;}
+    }
+    a {
+      text-decoration:underline;
+      padding:0;
+    } 
+    ;
+  }
+
+  ${CircleButton}{
+    display:none;
+    background-color:white;
+    width:40px;
+    height:40px;
+    z-index:30;
+  }
+  @media (max-width:750px){
+    flex-direction:column;
+    padding:20px 10px 5px 10px;
+    align-items:Center;
+    width:100%;
+    height:100px;
+    
+    ul {
+      justify-content: space-between;
+    }
+    
+    ${CircleButton}{
+      display:block;
+    }
+  }
 `;
+export const HideMenu = styled.div`
+width:100%;
+
+@media (max-width:750px){
+  display:none;
+}`
+
+export const menuHamburguer = styled.div`
+padding:80px 20px 20px;
+position:absolute;
+right:0px;
+top:0px;
+display:flex;
+align-items:start;
+gap:20px;
+flex-direction:column;
+background-color:black;
+
+
+select {
+  width:50%;
+}
+* {
+  width:100%;
+  &:hover{
+    background-color:white;
+    color:black;
+  }
+}
+`
 
 export const C_Apresentation = styled.main`
   grid-area: 2/1/2/3;
@@ -99,6 +174,10 @@ export const C_Apresentation = styled.main`
   justify-content: space-between;
   align-items: center;
   background-image: url(${MainImage});
+
+  @media (max-width:930px){
+      flex-direction: column-reverse;
+    }
 `;
 
 export const CardMain = styled.aside`
@@ -109,6 +188,15 @@ export const CardMain = styled.aside`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
+  @media (max-width:930px){
+    align-self:start;
+  }
+  @media (max-width:500px){
+    width:100%;
+    flex-direction: column;
+  }
+  
 `;
 
 export const CardMainItem = styled.article`
@@ -125,6 +213,11 @@ export const CardMainItem = styled.article`
     padding-bottom: 40px;
     text-align: center;
     color: blanchedalmond;
+  }
+  @media (max-width:500px){
+    width:70%;
+    align-self:center;
+    margin-top:10px;
   }
 `;
 
@@ -151,7 +244,10 @@ export const Apresentation = styled.div`
       padding-right: 8px;
       background-color: #c18741;
     }
+
+    
   }
+  
 `;
 export const Details = styled.aside`
   width: 400px;
@@ -177,6 +273,10 @@ export const Details = styled.aside`
     height: auto;
     display: flex;
     justify-content: space-between;
+  }
+  @media (max-width:930px){
+    width:100%;
+    padding-top:150px;
   }
 `;
 
@@ -208,7 +308,6 @@ export const MainVideo = styled.div`
     justify-content: space-evenly;
     height: 200px;
     width: 600px;
-    border: 1px solid red;
 
     div {
       width: 100%;
@@ -218,16 +317,38 @@ export const MainVideo = styled.div`
       align-self: center;
       align-items: center;
     }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      height:auto;
+      
+      *{
+        padding:10px 0;
+      }
+      div {
+        flex-direction:column;
+
+        ${CircleButton}{
+          padding:0;
+        }
+      }
+    }
   }
 `;
 
 export const CardVideo = styled(FlexColumn)`
   flex-direction: row;
   width: 900px;
-  height: 300px;
+  min-height: 300px;
+  height: 100%;
   z-index: 10;
   transform: translateY(100px);
 
+  h2 {
+    align-self:center;
+    padding-bottom: 10px !important;
+    font-size: 20px;
+  }
   ${FlexColumn} {
     flex-direction: column-reverse;
     width: 100%;
@@ -236,7 +357,7 @@ export const CardVideo = styled(FlexColumn)`
       height: 50%;
 
       width: 100%;
-      padding: 8px 8px 3px 3px;
+      padding: 8px 8px 20px 3px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -253,12 +374,43 @@ export const CardVideo = styled(FlexColumn)`
       background-color: whitesmoke;
     }
   }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+  @media (max-width: 740px) {
+    flex-direction: column;
+
+    ${FlexColumn} {
+      background-image: none;
+      align-items: center;
+      * {
+        height: 70%;
+        width: 60%;
+        align-self: center;
+      }
+      p {
+        width: 94%;
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    ${FlexColumn} {
+      * {
+        width: 100%;
+
+        h2 {
+          width:auto;
+        }
+      }
+    }
+  }
 `;
 
 export const TablePrice = styled.section`
   padding: 50px 0 0 0;
   display: grid;
-
+  height: 100%;
   align-self: center;
   width: 100%;
   gap: 16px;
@@ -303,13 +455,10 @@ export const ItemDetails = styled(FlexColumn)`
 `;
 
 export const Room = styled.div`
-  padding-top: 60px;
+  padding-top: 160px;
   width: 100%;
-  height: 500px;
-  transform: translateY(160px);
   display: grid;
   place-items: center;
-  position: relative;
 `;
 export const ContentRoom = styled.article`
   margin: 0 auto;
@@ -317,11 +466,11 @@ export const ContentRoom = styled.article`
   width: 100%;
   height: 100%;
   max-width: 900px;
-  position: absolute;
+
   transform: translateY(-100px);
   border-radius: 80px;
   display: flex;
-  border:1px solid grey;
+  border: 1px solid grey;
 
   aside {
     width: 40%;
@@ -333,6 +482,7 @@ export const ContentRoom = styled.article`
     background-color: white;
     border-radius: 0px 80px 80px 0px;
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: space-between;
     padding: 30px 20px;
@@ -340,7 +490,6 @@ export const ContentRoom = styled.article`
       flex-wrap: wrap;
       flex-direction: row;
       width: 100%;
-      border: 1px solid red;
       justify-content: space-between;
       ${Images} {
         width: 120px;
@@ -361,118 +510,141 @@ export const ContentRoom = styled.article`
       }
     }
   }
-  @media (max-width:920px){
-    flex-direction:column-reverse;
-    align-items:center;
+  @media (max-width: 920px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    border: none;
+    height: 100%;
 
+    * {
+      text-align: Center;
+      padding-top: 20px;
+    }
     aside {
-      width:100%;
-      height:200px;
-      border-radius:0px 0px 80px 80px;
+      display: none;
     }
     section {
-      width:94%;
-      align-items:center;
+      width: 94%;
+
+      align-items: center;
       p {
-        width:60%;
+        width: 60%;
       }
-    
-    ${CircleButton}{
-      align-self:center;
+
+      ${CircleButton} {
+        margin: 20px auto;
+        align-self: center;
+        padding: 0;
+      }
+      ${FlexColumn} {
+        justify-content: space-evenly;
+
+        ${Images} {
+          margin-top: 10px;
+          width: 200px;
+          height: 200px;
+        }
+      }
     }
+  }
+  @media (max-width: 480px) {
+    width: 94%;
+
+    section {
+      padding: 2px;
+
+      p {
+        width: 94%;
+      }
     }
-    
   }
 `;
 
 export const Footer = styled.div`
   width: 100%;
-  padding-top: 200px;
-  
-  
+  padding-top: 10px;
+
   div {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding:0 40px 0 40px;
+    padding: 0 40px 0 40px;
     background-color: #313131;
-    padding-bottom:60px;
-    @media (max-width:940px){
+    padding-bottom: 60px;
+    @media (max-width: 940px) {
       flex-direction: column;
     }
   }
   ${FlexColumn} {
     width: 400px;
-    color:white;
+    color: white;
     justify-content: space-evenly;
     padding: 30px 20px 10px 40px;
 
     p {
-      padding-top:20px;
+      padding-top: 20px;
     }
     aside {
       display: flex;
-      width:160px;
+      width: 160px;
       justify-content: space-between;
-      padding-top:30px;
+      padding-top: 30px;
     }
-    @media (max-width:940px){
-      width:100%;
-      align-items:center;
-      padding-bottom:20px;
+    @media (max-width: 940px) {
+      width: 100%;
+      align-items: center;
+      padding-bottom: 20px;
 
       p {
-        max-width:600px;
-        width:100%;
+        max-width: 600px;
+        width: 100%;
         padding: 20px 0 20px 0;
       }
     }
-    }
+  }
 `;
 export const Communication = styled.header`
-  margin:0 auto;
+  margin: 0 auto;
   width: 700px;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding-right:100px;
-  flex-wrap:wrap;
+  padding-right: 100px;
+  flex-wrap: wrap;
   ul {
-    
-  a {
-    text-decoration:underline;
-  }
+    a {
+      text-decoration: underline;
+    }
 
-  h3 {
-    color: #c18741;
-  }
+    h3 {
+      color: #c18741;
+    }
     li {
-      display:flex;
-      
-      padding-top:10px;
-      align-items:center;
-      width:100%;
+      display: flex;
 
-      p{
-        padding-left:20px;
+      padding-top: 10px;
+      align-items: center;
+      width: 100%;
+
+      p {
+        padding-left: 20px;
       }
     }
-    @media (max-width:550px){
-    padding:20px;
-    
-    h3 {
-      text-align:center;
+    @media (max-width: 550px) {
+      padding: 20px;
+
+      h3 {
+        text-align: center;
+      }
     }
   }
-  }
 
-  @media (max-width:1120px){
-    padding:0;
-    width:100%;
+  @media (max-width: 1120px) {
+    padding: 0;
+    width: 100%;
   }
-  @media (max-width:550px){
+  @media (max-width: 550px) {
     justify-content: space-evenly;
   }
-  
 `;
