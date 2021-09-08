@@ -20,40 +20,40 @@ const Footer = () => {
             staff.
           </p>
           <aside>
-            <S.IconNetwork src={Facebook} />
-            <S.IconNetwork src={Twitter} />
-            <S.IconNetwork src={Gmail} />
+            <S.IconNetwork src={Facebook} alt="facebook_icon"/>
+            <S.IconNetwork src={Twitter} alt="twitter_icon"/>
+            <S.IconNetwork src={Gmail} alt="gmail_icon"/>
           </aside>
         </S.FlexColumn>
         <S.Communication>
           <ul>
             <h3>Useful links</h3>
             <li>
-              <a href="/">Blog</a>
+              <a href="/" target="_blank" alt="none">Blog</a>
             </li>
             <li>
-              <a href="/">Rooms</a>
+              <a href="/" target="_blank" alt="none">Rooms</a>
             </li>
             <li>
-              <a href="/">Gift Card</a>
+              <a href="/" target="_blank" alt="none">Gift Card</a>
             </li>
             <li>
-              <a href="/">Testimonials</a>
+              <a href="/" target="_blank" alt="none">Testimonials</a>
             </li>
           </ul>
           <ul>
             <h3>Privacy</h3>
             <li>
-              <a href="/">Career</a>
+              <a href="/" target="_blank" alt="none">Career</a>
             </li>
             <li>
-              <a href="/">About us</a>
+              <a href="/" target="_blank" alt="none">About us</a>
             </li>
             <li>
-              <a href="/">Contact us</a>
+              <a href="/" target="_blank" alt="none">Contact us</a>
             </li>
             <li>
-              <a href="/">Services</a>
+              <a href="/" target="_blank" alt="none">Services</a>
             </li>
           </ul>
           <ul>

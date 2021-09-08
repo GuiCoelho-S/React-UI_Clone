@@ -46,14 +46,14 @@ const FitnessPage = () => {
                   <li>SHOP</li>
                   <li>ELEMENTS</li>
                   <li>
-                    <S.FitIcon src={Search} />
+                    <S.FitIcon src={Search} alt="search_icon"/>
                   </li>
                   <li>
-                    <S.FitIcon src={ShopCart} />
+                    <S.FitIcon src={ShopCart} alt="shopCart_icon"/>
                   </li>
                   <li>
                     <div>
-                      <S.BarsIcon src={Bars} />
+                      <S.BarsIcon src={Bars} alt="bars_icon"/>
                     </div>
                   </li>
                 </div>
@@ -63,7 +63,7 @@ const FitnessPage = () => {
         </S.Header>
         <S.ContainerMain>
           <S.Main>
-            <S.Bridge src={BridgeIMG} />
+            <S.Bridge src={BridgeIMG} alt="bridge"/>
 
             <div>
               <h2>BODY</h2>
@@ -82,7 +82,7 @@ const FitnessPage = () => {
                 </p>
                 <span>Readme More</span>
               </S.InfoFit>
-              <S.ImgFit src={MeditationIMG}></S.ImgFit>
+              <S.ImgFit src={MeditationIMG} alt="meditation"></S.ImgFit>
             </S.ContentGrid>
             <S.ContentGrid>
               <S.InfoFit>
@@ -94,11 +94,11 @@ const FitnessPage = () => {
                 </p>
                 <span>Readme More</span>
               </S.InfoFit>
-              <S.ImgFit src={Stretching}></S.ImgFit>
+              <S.ImgFit src={Stretching} alt="stretching_position"></S.ImgFit>
             </S.ContentGrid>
             <S.ContentGrid>
               <S.GridItem>
-                <S.ImgFit src={BridgeIMG} />
+                <S.ImgFit src={BridgeIMG} alt="bridge_position"/>
               </S.GridItem>
             </S.ContentGrid>
             <S.ContentGrid>
@@ -147,7 +147,7 @@ const FitnessPage = () => {
             </S.Aside>
             <S.NoticesArticle>
               <S.Card>
-                <S.ImgFit src={Card01} />
+                <S.ImgFit src={Card01} alt="card-01"/>
                 <div>
                   <span>MARCH 2, 2018</span>
                   <h2>YOUR ONLY LIMIT IS YOU !</h2>
@@ -160,7 +160,7 @@ const FitnessPage = () => {
                 </div>
               </S.Card>
               <S.Card>
-                <S.ImgFit src={Card02} />
+                <S.ImgFit src={Card02} alt="card-02"/>
                 <div>
                   <span>MARCH 2, 2018</span>
                   <h2>YOUR ONLY LIMIT IS YOU !</h2>
@@ -249,10 +249,10 @@ const FitnessPage = () => {
               <p>Copyright 2017 @ Qode Interactive</p>
               <S.FollowUs>
                 <p>Follow Us</p>
-                <S.FitIcon src={Twitter} />
-                <S.FitIcon src={Facebook} />
-                <S.FitIcon src={Linkedin} />
-                <S.FitIcon src={Vimeo} />
+                <S.FitIcon src={Twitter} alt="twitter_Icon"/>
+                <S.FitIcon src={Facebook} alt="facebook_Icon"/>
+                <S.FitIcon src={Linkedin} alt="linkedIn_Icon"/>
+                <S.FitIcon src={Vimeo} alt="vimeo_Icon"/>
               </S.FollowUs>
             </div>
           </S.Footer>

@@ -1,5 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 
+
 export const GlobalStyle = createGlobalStyle`
 
 * {
@@ -10,6 +11,10 @@ export const GlobalStyle = createGlobalStyle`
     list-style:none;
 
 
+}
+
+html,body {
+    font-family: 'Urbanist', sans-serif;
 }
 a {
     color:white;
