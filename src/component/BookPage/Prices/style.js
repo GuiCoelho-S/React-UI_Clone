@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { FlexColumn } from '../../../Pages/BookPage/style';
 import VideoBooks from '../../../assets/images/BookPage/5.1.jpg';
-import KeyBook from '../../../assets/images/BookPage/5.2.jpg';
+import ItemsDetails from '../../../assets/images/BookPage/items_details.jpg';
 
 export const Main = styled.div`
   display: grid;
@@ -107,10 +107,12 @@ export const TablePrice = styled.section`
   justify-content: space-evenly;
   align-content: start;
   grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
+
+  
 `;
 
 export const ItemDetails = styled(FlexColumn)`
-  background-image: url(${KeyBook});
+  background-image: url(${ItemsDetails});
   width: 100%;
   height: 140px;
   justify-content: space-evenly;
@@ -122,6 +124,7 @@ export const ItemDetails = styled(FlexColumn)`
   border: 1px solid red;
   align-items: center;
 
+  
   div {
     display: none;
     width: 100%;

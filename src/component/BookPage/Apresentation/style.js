@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import MainImage from "../../../assets/images/BookPage/1.jpg";
+import MainImage from "../../../assets/images/BookPage/main.jpg";
 import KeyBook from "../../../assets/images/BookPage/5.1.jpg";
 
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
@@ -15,7 +15,8 @@ export const C_Apresentation = styled.main`
   justify-content: space-between;
   align-items: center;
   background-image: url(${MainImage});
-
+  background-position: 75% 55%;
+  background-size:cover;
   @media (max-width: 930px) {
     flex-direction: column-reverse;
   }
@@ -70,11 +71,18 @@ export const Apresentation = styled.div`
   align-items: flex-start;
   justify-content: space-between;
 
+  * {
+    padding-top: 30px;
+  }
   ${FlexColumn} {
     flex-direction: row;
     justify-content: space-between;
     width: 230px;
-    padding: 0;
+    padding-top: 40px;
+
+    * {
+      padding-top: 0 !important;
+    }
     article {
       width: 160px;
       display: grid;
@@ -83,7 +91,12 @@ export const Apresentation = styled.div`
       font-size: 16px;
       padding-right: 8px;
       background-color: #c18741;
+
+   
     }
+  }
+  @media (max-width: 420px) {
+    width: 100%;
   }
 `;
 

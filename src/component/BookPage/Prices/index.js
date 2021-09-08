@@ -27,12 +27,12 @@ const Prices = () => {
           </div>
         </S.ItemDetails>
         <S.ItemDetails>
-          <h3>Room1</h3>
-          <p>$ 50.00/ night</p>
+          <h3>Room2</h3>
+          <p>$ 100.00/ night</p>
 
-          <span>05 REVIEWS</span>
+          <span>15 REVIEWS</span>
           <span>03 GUESTS</span>
-          <p>23 km</p>
+          <p>2 km</p>
 
           <div>
             <p>
@@ -46,12 +46,12 @@ const Prices = () => {
           </div>
         </S.ItemDetails>
         <S.ItemDetails>
-          <h3>Room1</h3>
-          <p>$ 50.00/ night</p>
+          <h3>Room3</h3>
+          <p>$ 150.00/ night</p>
 
-          <span>05 REVIEWS</span>
-          <span>03 GUESTS</span>
-          <p>23 km</p>
+          <span>03 REVIEWS</span>
+          <span>02 GUESTS</span>
+          <p>235 km</p>
 
           <div>
             <p>
@@ -65,11 +65,11 @@ const Prices = () => {
           </div>
         </S.ItemDetails>
         <S.ItemDetails>
-          <h3>Room1</h3>
-          <p>$ 50.00/ night</p>
-          <p>05 REVIEWS</p>
-          <p>03 GUESTS</p>
-          <p>23 km</p>
+          <h3>Room4</h3>
+          <p>$ 80.00/ night</p>
+          <p>07 REVIEWS</p>
+          <p>04 GUESTS</p>
+          <p>21 km</p>
 
           <div>
             <p>
