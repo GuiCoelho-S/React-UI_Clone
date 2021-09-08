@@ -25,7 +25,11 @@ export const FlexContainer = styled.main`
   h1 {
     font-weight: bold;
     color: #f7c922;
-    padding: 40px 0px;
+    padding: 40px 10px;
+
+    @media (max-width:420px){
+      font-size:24px;
+    }
   }
 
   a {
